@@ -122,4 +122,4 @@ int findClosest(CvScalar t, CvScalar* scolors, int numColors) {
     
 	// TODO: return result.
     return rv;
-}           
+}  

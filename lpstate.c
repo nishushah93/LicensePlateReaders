@@ -1,4 +1,4 @@
-#ifindef lpstate_c
+#ifndef lpstate_c
 #define lpstate_c
 
 

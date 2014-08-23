@@ -1,3 +1,7 @@
+#ifndef database_c_
+#define database_c_
+
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -7,8 +11,7 @@
 struct LicencePlate
 {
     char state[3];
-    char code[3];
-    int plateNumber;
+    char platenumber[7];
 };
 struct Owner
 {
@@ -20,35 +23,22 @@ struct Owner
 typedef struct Owner Owner;
 typedef struct LicencePlate LicencePlate;
 
-struct Owner newOwner()
+Owner newOwner(char *state, char *number)
 {
     char firstname[10];
     char lastname[10];
-    char code[4];
-    char state[3];
-    int plateNumber;
     
     printf("Please enter your First name: ");
     scanf("%s",firstname);
     
     printf("Please enter your Last name: ");
     scanf("%s",lastname);
-    
-    printf("Please enter your state ");
-    scanf("%s",state);
-    
-    printf("Please enter your code ");
-    scanf("%s",code);
-    
-    printf("Please enter your plate number ");
-    scanf("%d",&plateNumber);
-    
+     
     struct Owner nOwner;
     strcpy(nOwner.firstName ,firstname);
     strcpy(nOwner.lastName ,lastname);
     strcpy(nOwner.licencePlateInfo.state, state);
-    strcpy(nOwner.licencePlateInfo.code ,code);
-    nOwner.licencePlateInfo.plateNumber = plateNumber;
+    strcpy(nOwner.licencePlateInfo.platenumber ,number);
     
     
     return nOwner;
@@ -72,19 +62,18 @@ void WriteToXML(Owner owner)
     FILE *fp ;
     char * cwd = getCurrentDirectory();
     fp = fopen(cwd, "a");
-    fprintf(fp,"<owner firstName='%s' lastName='%s'> \n  <state>%s</state>  \n  <code>%s</code> \n  <plateNumber>%d</plateNumber> \n</owner> \n",owner.firstName,owner.lastName,owner.licencePlateInfo.state,owner.licencePlateInfo.code,owner.licencePlateInfo.plateNumber);
+    fprintf(fp,"<owner firstName='%s' lastName='%s'> \n  <state>%s</state>  \n  <code>%s</code>  \n</owner> \n",owner.firstName,owner.lastName,owner.licencePlateInfo.state,owner.licencePlateInfo.platenumber);
     fclose(fp);
 }
 
 
 
-int main(int argc, const char * argv[])
-{
-    struct Owner owner;
+
+  //  Owner owner;
     
-    owner = newOwner();
+  //  owner = newOwner();
     
-    WriteToXML(owner);
+  //  WriteToXML(owner);
     
-    return 0;
-}
+
+#endif

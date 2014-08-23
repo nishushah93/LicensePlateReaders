@@ -1,6 +1,6 @@
-E
-
 #include "fp.h"
+#include "database.c"
+#include "lplate.c"
 
 int main( int argc, char ** argv )
 {
@@ -12,11 +12,15 @@ int main( int argc, char ** argv )
 	charInfo * char_info;
 	char** plate_number;
 	int i;
+        char state[2];
 
 	if( argc < 3 )
 		exit (0);
 	else
 	{
+
+		state = findState(argv);
+
 		//Load template image
 		template_img = cvLoadImage( argv[1], CV_LOAD_IMAGE_GRAYSCALE);
 		
@@ -38,22 +42,13 @@ int main( int argc, char ** argv )
 		printf("\n");
 
 
-		//Release and free	
-//		for( i = 0; i < numContours; i++ )
-//		{	if(char_info[i].charImage != NULL)
-//					cvReleaseImage(&char_info[i].charImage);	}
-//		free( char_info );
 		
-//		for( i = 0; i < 8; i++)
-//		{		cvReleaseImage(&plate_info[i].charImage);		}
-//		free( plate_info );
-
-//		for( i = 0; i < 8; i++ )
-//			free( plate_number[i] );
-//		free( plate_number );
+		Owner owner;
+		owner = newOwner(state, *plate_number);
+		WriteToXML(owner);
 
 		
 		return EXIT_SUCCESS;
-	}
+	}   
+
 }
-nter file contents here

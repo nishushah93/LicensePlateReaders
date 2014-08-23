@@ -1,6 +1,6 @@
 #include "fp.h"
-#include "database.c"
-#include "lpstate.c"
+#include "database.h"
+#include "lpstate.h"
 
 int main( int argc, char ** argv )
 {

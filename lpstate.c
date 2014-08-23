@@ -1,13 +1,10 @@
-#ifndef lpstate_c
-#define lpstate_c
-
 
 #include "cv.h"
 #include "highgui.h"
 #include "math.h"
 #include "stdlib.h"
 #include "stdio.h"
-
+#include "lpstate.h"
 // first two functions from HW4 can be reused to help
 // these two will help determine what colors the three sections picked out are
 
@@ -171,8 +168,4 @@ char* findState(char** filenames) {
 }
 
     
-         
-
-
-
-#endif
+        

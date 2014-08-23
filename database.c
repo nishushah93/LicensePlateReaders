@@ -1,27 +1,8 @@
-#ifndef database_c_
-#define database_c_
-
 
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
-
-
-
-struct LicencePlate
-{
-    char state[3];
-    char platenumber[7];
-};
-struct Owner
-{
-    char lastName [10];
-    char firstName [10];
-    struct LicencePlate licencePlateInfo;
-};
-
-typedef struct Owner Owner;
-typedef struct LicencePlate LicencePlate;
+#include "database.h"
 
 Owner newOwner(char *state, char *number)
 {
@@ -76,4 +57,3 @@ void WriteToXML(Owner owner)
   //  WriteToXML(owner);
     
 
-#endif

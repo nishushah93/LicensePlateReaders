@@ -1,4 +1,3 @@
-Enter file contents here
 #ifndef fp_H_
 #define fp_H_
 

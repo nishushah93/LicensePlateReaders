@@ -97,7 +97,7 @@ char* findState(char** filenames) {
     
     
     //currently these args are just 3 pictures of colors i took screenshots of
-    blue = cvLoadImage(filesnames[2], CV_LOAD_IMAGE_COLOR);
+    blue = cvLoadImage(filenames[2], CV_LOAD_IMAGE_COLOR);
     white = cvLoadImage(filenames[3], CV_LOAD_IMAGE_COLOR);
     yellow = cvLoadImage(filenames[4], CV_LOAD_IMAGE_COLOR);
     

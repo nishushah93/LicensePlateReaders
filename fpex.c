@@ -12,14 +12,14 @@ int main( int argc, char ** argv )
 	charInfo * char_info;
 	char** plate_number;
 	int i;
-        char state[2];
+        
 
 	if( argc < 3 )
 		exit (0);
 	else
 	{
 
-		state = findState(argv);
+	        char *state = findState(argv);
 
 		//Load template image
 		template_img = cvLoadImage( argv[1], CV_LOAD_IMAGE_GRAYSCALE);

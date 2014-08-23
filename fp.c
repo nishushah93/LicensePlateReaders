@@ -423,9 +423,9 @@ char** compareChar( charInfo * char_info, plateInfo * plate_info, int * numConto
 							cvReleaseImage(&charRow);
 						}
 			
-						printf("char_info j: %d  letter: %s  ", j, char_info[j].charText);
-						printf("temp: %f  result: %f  ", temp, result);
-						printf("totalSim: %d  totalDif: %d  sim-dif: %d\n", totalSim, totalDif, (totalSim-totalDif));
+						//printf("char_info j: %d  letter: %s  ", j, char_info[j].charText);
+						//printf("temp: %f  result: %f  ", temp, result);
+						//printf("totalSim: %d  totalDif: %d  sim-dif: %d\n", totalSim, totalDif, (totalSim-totalDif));
 
 						if( totalSim > maxSim )	
 						{

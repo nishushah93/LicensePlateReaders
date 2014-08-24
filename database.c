@@ -34,7 +34,6 @@ char * getCurrentDirectory()
         perror("getcwd() error");
     strcat(cwd, "/test.xml");
     
-    fprintf(stdout, "Current working dir: %s\n", cwd);
     return cwd;
 }
 

@@ -88,15 +88,15 @@ char* findState(char** filenames) {
              
 
     // resize the image
-    src = cvLoadImage(filenames[1], CV_LOAD_IMAGE_COLOR);
+    src = cvLoadImage(filenames[2], CV_LOAD_IMAGE_COLOR);
     resize = cvCreateImage(cvSize(400, 200), IPL_DEPTH_8U, src->nChannels);
     cvResize( src, resize, CV_INTER_LINEAR) ; 
     
     
     //currently these args are just 3 pictures of colors i took screenshots of
-    blue = cvLoadImage(filenames[2], CV_LOAD_IMAGE_COLOR);
-    white = cvLoadImage(filenames[3], CV_LOAD_IMAGE_COLOR);
-    yellow = cvLoadImage(filenames[4], CV_LOAD_IMAGE_COLOR);
+    blue = cvLoadImage(filenames[3], CV_LOAD_IMAGE_COLOR);
+    white = cvLoadImage(filenames[4], CV_LOAD_IMAGE_COLOR);
+    yellow = cvLoadImage(filenames[5], CV_LOAD_IMAGE_COLOR);
     
     // create the pixel images
     firstPixel = cvCreateImage(cvSize(5,5), resize->depth, resize->nChannels);
@@ -162,7 +162,7 @@ char* findState(char** filenames) {
     }
     
 
-
+    printf("%s",state);
     
     return(state);
 }

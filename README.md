@@ -7,3 +7,8 @@ The purpose of this project is to develop a program that will identify, extract,
 To compile the code run the following command: 
 
  gcc -I/usr/include/opencv -I/usr/include/opencv2 -L /usr/local/lib -o fp lpstate.h lpstate.c fpex.c fp.c fp.h database.h database.c -lopencv_core -lopencv_imgproc -lopencv_highgui -lm
+
+
+to run it:
+
+ ./fp d8b0396e-2965-11e4-98d5-6bed498b416d.jpg example.jpg blue.JPG white.JPG yellow.JPG 

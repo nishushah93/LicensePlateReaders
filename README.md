@@ -11,4 +11,4 @@ To compile the code run the following command:
 
 to run it:
 
- ./fp d8b0396e-2965-11e4-98d5-6bed498b416d.jpg example.jpg blue.JPG white.JPG yellow.JPG 
+ ./fp PA_Keystone_Template.jpg example.jpg blue.JPG white.JPG yellow.JPG 

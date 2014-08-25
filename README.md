@@ -9,7 +9,7 @@ To compile the first version of the code run the following command:
  gcc -I/usr/include/opencv -I/usr/include/opencv2 -L /usr/local/lib -o fp lpstate.h lpstate.c fpex.c fp.c fp.h database.h database.c -lopencv_core -lopencv_imgproc -lopencv_highgui -lm
 
 
-To compile the newest version: 
+To compile the latest version: 
 
 gcc -I/usr/include/opencv -I/usr/include/opencv2 -L /usr/local/lib -o fp2 lpstate2.h lpstate2.c fpex2.c fp2.c fp2.h database2.h database2.c -lopencv_core -lopencv_imgproc -lopencv_highgui -lm
 
